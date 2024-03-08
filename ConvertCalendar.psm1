@@ -8,7 +8,7 @@ function AD2JapaneseCalendar([string]$YMD){
 	if( $YMD -ne [string]$null ){
 		$InputDateTime = $YMD -as [datetime]
 		if( $InputDateTime -eq $null ){
-			retrun "$YMD は西暦として認識できません"
+			return "$YMD は西暦として認識できません"
 		}
 	}
 	else{
@@ -40,7 +40,7 @@ function JapaneseCalendar2AD([string]$Gengo, [string]$YMD){
 		$JC = $Gengo
 	}
 	else{
-		retrun "元号 と 年月日を入力してください"
+		return "元号 と 年月日を入力してください"
 	}
 
 	# 日付分解

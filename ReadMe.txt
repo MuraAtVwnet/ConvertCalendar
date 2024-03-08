@@ -2,15 +2,26 @@
 和暦西暦変換 PowerShell です
 
 ■ どう使うの?
-和暦 -> 西暦
+・西暦 -> 和暦
+(ad2[TAB] で補完され AD2JapaneseCalendar が表示されます)
+
 AD2JapaneseCalendar 9999/99/99
 
+例) AD2JapaneseCalendar 1995/8/25
 
-和暦 -> 西暦
+引数無しで今日の和暦を表示します
+
+
+・和暦 -> 西暦
+(jap[TAB] で補完され JapaneseCalendar2AD が表示されます)
+
 JapaneseCalendar2AD 元号99/99/99
 JapaneseCalendar2AD 元号99年99月99日
 
 元号 : M/T/S/H/R/明治/大正/昭和/平成/令和
+
+例) JapaneseCalendar2AD M34/4/29
+
 
 ■ Online Install 方法
 以下コマンドを PowerShell プロンプトにコピペして下さい
