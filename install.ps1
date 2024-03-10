@@ -12,4 +12,4 @@ if( -not (Test-Path $NewPath)){
 
 # Copy Module
 $ModuleFileName = Join-Path $PSScriptRoot ($ModuleName + ".psm1")
-copy $ModuleFileName $NewPath
+Copy-Item $ModuleFileName $NewPath
