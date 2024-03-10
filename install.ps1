@@ -2,15 +2,15 @@
 $ModuleName = "ConvertCalendar"
 
 # Module Path
-if(($PSVersionTable.Platform -eq "Win32NT") -or ($PSVersionTable.Platform -eq $null){
+if(($PSVersionTable.Platform -eq "Win32NT") -or ($PSVersionTable.Platform -eq $null)){
 $ModulePath = Join-Path (Split-Path $PROFILE -Parent) "Modules"
-else{
+}else{
 Join-Path ($HOME) "/.local/share/powershell/Modules"}
 $NewPath = Join-Path $ModulePath $ModuleName
 
 # Make Directory
 if( -not (Test-Path $NewPath)){
-	md $NewPath
+	New-Item $NewPath -ItemType Directory -ErrorAction SilentlyContinue
 }
 
 # Copy Module
