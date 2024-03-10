@@ -5,7 +5,7 @@ $ModuleName = "ConvertCalendar"
 if(($PSVersionTable.Platform -eq "Win32NT") -or ($PSVersionTable.Platform -eq $null)){
 $ModulePath = Join-Path (Split-Path $PROFILE -Parent) "Modules"
 }else{
-Join-Path ($HOME) "/.local/share/powershell/Modules"}
+$ModulePath = Join-Path ($env:HOME) "/.local/share/powershell/Modules"}
 $RemovePath = Join-Path $ModulePath $ModuleName
 
 # Remove Direcory
