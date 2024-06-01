@@ -27,12 +27,13 @@ JapaneseCalendar2AD 元号99年99月99日
 以下コマンドを PowerShell プロンプトにコピペして下さい
 
 $ScriptName = "ConvertCalendar"
+$GitHubName = "MuraAtVwnet"
 $Module = $ScriptName + ".psm1"
 $Installer =  "Install" + $ScriptName + ".ps1"
 $UnInstaller = "UnInstall" + $ScriptName + ".ps1"
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/MuraAtVwnet/$ScriptName/master/$Module -OutFile ~/$Module
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/MuraAtVwnet/$ScriptName/master/install.ps1 -OutFile ~/$Installer
-Invoke-WebRequest -Uri https://raw.githubusercontent.com/MuraAtVwnet/$ScriptName/master/uninstall.ps1 -OutFile ~/$UnInstaller
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ScriptName/master/$Module -OutFile ~/$Module
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ScriptName/master/install.ps1 -OutFile ~/$Installer
+Invoke-WebRequest -Uri https://raw.githubusercontent.com/$GitHubName/$ScriptName/master/uninstall.ps1 -OutFile ~/$UnInstaller
 & ~/$Installer
 Remove-Item ~/$Module
 Remove-Item ~/$Installer
